@@ -29,7 +29,8 @@ To run the file
 yarn dev
 ```
 
-## Setting up CI/CD Pipelines
+## Setting up Testing
+
 To install testing libraries
 ```bash
 yarn add @testing-library/jest-dom @testing-library/react @testing-library/user-event jest jest-environment-jsdom ts-jest
@@ -43,6 +44,16 @@ Add the following to scripts in package.json
 Add Jest config file in root directory as jest.config.js
 
 Add Jest setup file in root directory as jest.setup.js
+
+## Setting up CI/CD Pipelines
+
+1. Go to the github repository
+2. Go to Actions tab
+3. Choose Workflow. Under Continuous Integration, choose Node JS
+4. Change the yml file name and commit changes
+5. Pull the changes to local
+6. Make the neccessary changes
+
 
 
 
