@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Setting Up
+The easiest way to get started with Next.js is by using create-next-app
 
 ```bash
-npm run dev
-# or
+npx create-next-app@14.0.4
+```
+To install yarn. Yarn is a package manager similar to npm
+```bash
+npm install -g yarn 
+```
+To check your yarn version
+```bash
+yarn --version
+```
+To avoid conflict with storybook and jest
+```bash
+yarn set version stable
+```
+Delete package-lock.json file, and run the following command to create yarn-lock file
+```bash
+yarn 
+```
+! Add .yarn in gitignore file to avoid pushing the unneccessary files
+
+To run the file 
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setting up CI/CD Pipelines
+To install testing libraries
+```bash
+yarn add @testing-library/jest-dom @testing-library/react @testing-library/user-event jest jest-environment-jsdom ts-jest
+```
+Add the following to scripts in package.json
+```
+"test":"jest --coverage",
+"test:watch":"jest --watchAll"
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Add Jest config file in root directory as jest.config.js
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Add Jest setup file in root directory as jest.setup.js
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
